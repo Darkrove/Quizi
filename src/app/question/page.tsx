@@ -3,6 +3,7 @@
 import { useState } from 'react';
 import { motion } from 'framer-motion';
 import Image from 'next/image';
+import { buttonVariants } from "@/components/ui/button"
 import {
   Flame,
   Trophy,
@@ -27,6 +28,7 @@ import {
 } from '@/components/ui/tooltip';
 import { Input } from '@/components/ui/input';
 import Link from 'next/link';
+import { cn } from '@/lib/utils';
 export default function Component() {
   const [progress, setProgress] = useState(40);
   const [selectedAnswers, setSelectedAnswers] = useState<
@@ -47,7 +49,7 @@ export default function Component() {
       className="min-h-screen w-full bg-cover bg-center bg-fixed"
       style={{
         backgroundImage:
-          'url("https://hebbkx1anhila5yf.public.blob.vercel-storage.com/Designer-maps-1-FsbrLNi7KfcUId20OeWWC3iKP2n9KY.jpeg")',
+          'url("/assets/205b79ac4dc42a146713813581ab3f86.gif")',
       }}
     >
       <div className="min-h-screen w-full backdrop-blur-sm bg-slate-900/70">
@@ -249,16 +251,21 @@ export default function Component() {
               </div>
               <Input
                 type="url"
-                placeholder="Enter URL for additional information"
+                placeholder="Enter URL for Reference"
                 value={url}
                 onChange={(e) => setUrl(e.target.value)}
-                className="flex-grow bg-gradient-to-r from-[#006d5b] to-[#20b2aa] text-white placeholder-white backdrop-blur-sm"
+                className="flex-grow text-green-900 placeholder-green-900 backdrop-blur-sm"
               />
             </div>
             <div className="flex justify-end">
-              <Button className="bg-green-600 text-green-100 hover:bg-[#4a9d94] px-6 shadow-lg">
-                Submit Verification
-              </Button>
+            <button className="flex items-center px-6 py-3 bg-green-500 text-sm font-medium text-white rounded-lg  hover:bg-green-700 transition duration-200">
+          <Link href='/result' className="flex justify-center items-center"> 
+
+          Submit
+          </Link>
+          
+        </button>
+              
             </div>
           </motion.div>
         </div>
