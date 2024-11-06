@@ -55,26 +55,8 @@ export default function Component() {
           <motion.div
             initial={{ opacity: 0, y: -20 }}
             animate={{ opacity: 1, y: 0 }}
-            className="bg-gradient-to-r from-[#006d5b] to-[#20b2aa] rounded-lg p-4 mb-6 shadow-lg backdrop-blur-sm border border-[#97c3c0]/20"
+            className="bg-gradient-to-r from-[#006d5b] to-[#20b2aa] rounded-lg p-4 mb-6 shadow-lg backdrop-blur-sm border"
           >
-            <div className="flex items-center justify-between mb-4">
-              <div className="flex items-center space-x-6">
-                <div className="flex items-center space-x-2 text-[#e07a52]">
-                  <Flame className="h-5 w-5" />
-                  <span className="font-semibold">12 day streak</span>
-                </div>
-                <div className="flex items-center space-x-2 text-yellow-600">
-                  <Trophy className="h-5 w-5" />
-                  <span className="font-semibold">450 points</span>
-                </div>
-              </div>
-              <div className="flex items-center space-x-3 text-sm text-white">
-                <span>Progress</span>
-                <Progress value={progress} className="w-24 bg-[#97c3c0]/20 border border-zinc-800" />
-                <span>4/10</span>
-              </div>
-            </div>
-
             <div className="flex items-start justify-between">
               <div className='w-full'>
                 <div className='flex flex-row justify-between w-full'>
@@ -85,7 +67,7 @@ export default function Component() {
                     <TooltipProvider>
                       <Tooltip>
                         <TooltipTrigger>
-                          <AlertCircle className="ml-2 h-4 w-4 text-blue-200" />
+                          <AlertCircle className="ml-2 h-4 w-4 text-red-500" />
                         </TooltipTrigger>
                         <TooltipContent>
                           <p>Name of the Place</p>
@@ -100,7 +82,7 @@ export default function Component() {
                     <TooltipProvider>
                       <Tooltip>
                         <TooltipTrigger>
-                          <AlertCircle className="ml-2 h-4 w-4 text-blue-200" />
+                          <AlertCircle className="ml-2 h-4 w-4 text-red-500" />
                         </TooltipTrigger>
                         <TooltipContent>
                           <p>Category of the Place</p>
@@ -112,17 +94,18 @@ export default function Component() {
                 </div>
 
 
-                <span className="text-sm text-green-600 font-medium">
-                  +50 points
+                <span className="text-sm text-yellow-500 font-medium">
+                  +10 Coins
                 </span>
-                <div className="flex items-center space-x-2 text-white mt-1">
+                <div className="flex items-center justify-between space-x-2 text-white mt-1">
+                  
+                  <div className='flex justify-center items-center gap-2'> 
                   <MapPin className="h-4 w-4" />
-                  <div className='flex'> 
                   <span>133 W Oak St, Louisville, KY 40203, United States</span>
                   <TooltipProvider>
                       <Tooltip>
                         <TooltipTrigger>
-                          <AlertCircle className="ml-2 h-4 w-4 text-blue-200" />
+                          <AlertCircle className="ml-2 h-4 w-4 text-red-500" />
                         </TooltipTrigger>
                         <TooltipContent>
                           <p>Address of the Place</p>
@@ -130,14 +113,18 @@ export default function Component() {
                       </Tooltip>
                     </TooltipProvider>
                   </div>
-                  
+                  <div className="flex items-center space-x-3 text-sm text-white">
+                <span>Progress</span>
+                <Progress value={progress} className="w-24 bg-[#97c3c0]/20 border border-zinc-800" />
+                <span>4/10</span>
+              </div>
                 </div>
               </div>
             </div>
           </motion.div>
 
           <div className="grid md:grid-cols-2 gap-6 mb-6">
-            <Card className="bg-gradient-to-r from-[#006d5b] to-[#20b2aa] border-[#97c3c0]/20 shadow-lg backdrop-blur-sm">
+            <Card className="bg-gradient-to-r from-[#006d5b] to-[#20b2aa] shadow-lg backdrop-blur-sm">
               <CardHeader className="p-4">
                 <CardTitle className="text-sm font-medium flex items-center text-white">
                   <Map className="h-4 w-4 mr-2" />
@@ -157,7 +144,7 @@ export default function Component() {
               </CardContent>
             </Card>
 
-            <Card className="bg-gradient-to-r from-[#006d5b] to-[#20b2aa] border-[#97c3c0]/20 shadow-lg backdrop-blur-sm">
+            <Card className="bg-gradient-to-r from-[#006d5b] to-[#20b2aa] shadow-lg backdrop-blur-sm">
               <CardHeader className="p-4">
                 <CardTitle className="text-sm font-medium flex items-center text-white">
                   <Database className="h-4 w-4 mr-2" />
@@ -189,7 +176,7 @@ export default function Component() {
                 initial={{ opacity: 0, x: -20 }}
                 animate={{ opacity: 1, x: 0 }}
                 transition={{ delay: index * 0.1 + 0.5 }}
-                className="bg-gradient-to-r from-[#006d5b] to-[#20b2aa] rounded-lg p-4 shadow-lg backdrop-blur-sm border border-[#97c3c0]/20"
+                className="bg-gradient-to-r from-[#006d5b] to-[#20b2aa] rounded-lg p-4 shadow-lg backdrop-blur-sm border"
               >
                 <div className="flex items-center justify-between">
                   <div className="flex items-center space-x-2">
@@ -265,7 +252,7 @@ export default function Component() {
                 placeholder="Enter URL for additional information"
                 value={url}
                 onChange={(e) => setUrl(e.target.value)}
-                className="flex-grow bg-gradient-to-r from-[#006d5b] to-[#20b2aa] border-[#97c3c0]/20 text-white placeholder-[#97c3c0] backdrop-blur-sm"
+                className="flex-grow bg-gradient-to-r from-[#006d5b] to-[#20b2aa] text-white placeholder-white backdrop-blur-sm"
               />
             </div>
             <div className="flex justify-end">
