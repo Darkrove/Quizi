@@ -55,7 +55,7 @@ export default function Component() {
           <motion.div
             initial={{ opacity: 0, y: -20 }}
             animate={{ opacity: 1, y: 0 }}
-            className="bg-gradient-to-r from-green-200 to-blue-400 rounded-lg p-4 mb-6 shadow-lg backdrop-blur-sm border border-[#97c3c0]/20"
+            className="bg-gradient-to-r from-green-100 to-blue-400 rounded-lg p-4 mb-6 shadow-lg backdrop-blur-sm border border-[#97c3c0]/20"
           >
             <div className="flex items-center justify-between mb-4">
               <div className="flex items-center space-x-6">
@@ -137,7 +137,7 @@ export default function Component() {
           </motion.div>
 
           <div className="grid md:grid-cols-2 gap-6 mb-6">
-            <Card className="bg-gradient-to-r from-green-200 to-blue-400 border-[#97c3c0]/20 shadow-lg backdrop-blur-sm">
+            <Card className="bg-gradient-to-r from-green-100 to-blue-400 border-[#97c3c0]/20 shadow-lg backdrop-blur-sm">
               <CardHeader className="p-4">
                 <CardTitle className="text-sm font-medium flex items-center text-zinc-900">
                   <Map className="h-4 w-4 mr-2" />
@@ -157,7 +157,7 @@ export default function Component() {
               </CardContent>
             </Card>
 
-            <Card className="bg-gradient-to-r from-green-200 to-blue-400 border-[#97c3c0]/20 shadow-lg backdrop-blur-sm">
+            <Card className="bg-gradient-to-r from-green-100 to-blue-400 border-[#97c3c0]/20 shadow-lg backdrop-blur-sm">
               <CardHeader className="p-4">
                 <CardTitle className="text-sm font-medium flex items-center text-zinc-900">
                   <Database className="h-4 w-4 mr-2" />
@@ -189,7 +189,7 @@ export default function Component() {
                 initial={{ opacity: 0, x: -20 }}
                 animate={{ opacity: 1, x: 0 }}
                 transition={{ delay: index * 0.1 + 0.5 }}
-                className="bg-gradient-to-r from-green-200 to-blue-400 rounded-lg p-4 shadow-lg backdrop-blur-sm border border-[#97c3c0]/20"
+                className="bg-gradient-to-r from-green-100 to-blue-400 rounded-lg p-4 shadow-lg backdrop-blur-sm border border-[#97c3c0]/20"
               >
                 <div className="flex items-center justify-between">
                   <div className="flex items-center space-x-2">
@@ -257,7 +257,7 @@ export default function Component() {
             className="mt-6 space-y-4"
           >
             <div className="flex items-center space-x-2">
-              <div className="bg-gradient-to-r from-green-200 to-blue-400 p-2 rounded-full backdrop-blur-sm">
+              <div className="bg-gradient-to-r from-green-100 to-blue-400 p-2 rounded-full backdrop-blur-sm">
                 <LinkIcon className="h-6 w-6 text-zinc-900" />
               </div>
               <Input
@@ -265,7 +265,7 @@ export default function Component() {
                 placeholder="Enter URL for additional information"
                 value={url}
                 onChange={(e) => setUrl(e.target.value)}
-                className="flex-grow bg-gradient-to-r from-green-200 to-blue-400 border-[#97c3c0]/20 text-zinc-900 placeholder-[#97c3c0] backdrop-blur-sm"
+                className="flex-grow bg-gradient-to-r from-green-100 to-blue-400 border-[#97c3c0]/20 text-zinc-900 placeholder-[#97c3c0] backdrop-blur-sm"
               />
             </div>
             <div className="flex justify-end">
