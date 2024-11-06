@@ -55,7 +55,7 @@ export default function Component() {
           <motion.div
             initial={{ opacity: 0, y: -20 }}
             animate={{ opacity: 1, y: 0 }}
-            className="bg-gradient-to-r from-green-100 to-blue-400 rounded-lg p-4 mb-6 shadow-lg backdrop-blur-sm border border-[#97c3c0]/20"
+            className="bg-gradient-to-r from-[#006d5b] to-[#20b2aa] rounded-lg p-4 mb-6 shadow-lg backdrop-blur-sm border border-[#97c3c0]/20"
           >
             <div className="flex items-center justify-between mb-4">
               <div className="flex items-center space-x-6">
@@ -68,7 +68,7 @@ export default function Component() {
                   <span className="font-semibold">450 points</span>
                 </div>
               </div>
-              <div className="flex items-center space-x-3 text-sm text-zinc-900">
+              <div className="flex items-center space-x-3 text-sm text-white">
                 <span>Progress</span>
                 <Progress value={progress} className="w-24 bg-[#97c3c0]/20 border border-zinc-800" />
                 <span>4/10</span>
@@ -79,13 +79,13 @@ export default function Component() {
               <div className='w-full'>
                 <div className='flex flex-row justify-between w-full'>
                   <div className='flex'>
-                    <h1 className="text-2xl font-bold text-zinc-900">
+                    <h1 className="text-2xl font-bold text-white">
                       Papa B's Chicken & Fish
                     </h1>
                     <TooltipProvider>
                       <Tooltip>
                         <TooltipTrigger>
-                          <AlertCircle className="ml-2 h-4 w-4 text-blue-600" />
+                          <AlertCircle className="ml-2 h-4 w-4 text-blue-200" />
                         </TooltipTrigger>
                         <TooltipContent>
                           <p>Name of the Place</p>
@@ -94,13 +94,13 @@ export default function Component() {
                     </TooltipProvider>
                   </div>
                   <div className='flex'>
-                    <h1 className="text-2xl font-bold text-zinc-900">
+                    <h1 className="text-2xl font-bold text-white">
                       Restaurant
                     </h1>
                     <TooltipProvider>
                       <Tooltip>
                         <TooltipTrigger>
-                          <AlertCircle className="ml-2 h-4 w-4 text-blue-600" />
+                          <AlertCircle className="ml-2 h-4 w-4 text-blue-200" />
                         </TooltipTrigger>
                         <TooltipContent>
                           <p>Category of the Place</p>
@@ -115,14 +115,14 @@ export default function Component() {
                 <span className="text-sm text-green-600 font-medium">
                   +50 points
                 </span>
-                <div className="flex items-center space-x-2 text-zinc-900 mt-1">
+                <div className="flex items-center space-x-2 text-white mt-1">
                   <MapPin className="h-4 w-4" />
                   <div className='flex'> 
                   <span>133 W Oak St, Louisville, KY 40203, United States</span>
                   <TooltipProvider>
                       <Tooltip>
                         <TooltipTrigger>
-                          <AlertCircle className="ml-2 h-4 w-4 text-blue-600" />
+                          <AlertCircle className="ml-2 h-4 w-4 text-blue-200" />
                         </TooltipTrigger>
                         <TooltipContent>
                           <p>Address of the Place</p>
@@ -137,9 +137,9 @@ export default function Component() {
           </motion.div>
 
           <div className="grid md:grid-cols-2 gap-6 mb-6">
-            <Card className="bg-gradient-to-r from-green-100 to-blue-400 border-[#97c3c0]/20 shadow-lg backdrop-blur-sm">
+            <Card className="bg-gradient-to-r from-[#006d5b] to-[#20b2aa] border-[#97c3c0]/20 shadow-lg backdrop-blur-sm">
               <CardHeader className="p-4">
-                <CardTitle className="text-sm font-medium flex items-center text-zinc-900">
+                <CardTitle className="text-sm font-medium flex items-center text-white">
                   <Map className="h-4 w-4 mr-2" />
                   Google Maps
                 </CardTitle>
@@ -147,7 +147,7 @@ export default function Component() {
               <CardContent className="p-4 pt-0">
                 <motion.div
                   whileHover={{ scale: 1.02 }}
-                  className="bg-blue-100 rounded-lg p-1 text-center text-zinc-900"
+                  className="bg-blue-100 rounded-lg text-center text-white"
                 >
                   <Link target='blank' href='https://maps.app.goo.gl/xTxBpNqvqP33WTYW8'>
                   <Image src="/assets/google-map.png" alt='google map image' width={1000} height={1000} className='h-full w-full rounded-md object-cover' />
@@ -157,9 +157,9 @@ export default function Component() {
               </CardContent>
             </Card>
 
-            <Card className="bg-gradient-to-r from-green-100 to-blue-400 border-[#97c3c0]/20 shadow-lg backdrop-blur-sm">
+            <Card className="bg-gradient-to-r from-[#006d5b] to-[#20b2aa] border-[#97c3c0]/20 shadow-lg backdrop-blur-sm">
               <CardHeader className="p-4">
-                <CardTitle className="text-sm font-medium flex items-center text-zinc-900">
+                <CardTitle className="text-sm font-medium flex items-center text-white">
                   <Database className="h-4 w-4 mr-2" />
                   MapCreator
                 </CardTitle>
@@ -167,7 +167,7 @@ export default function Component() {
               <CardContent className="p-4 pt-0">
                 <motion.div
                   whileHover={{ scale: 1.02 }}
-                  className="bg-blue-100 rounded-lg p-1 text-center text-zinc-900"
+                  className="bg-blue-100 rounded-lg text-center text-white"
                 >
                   <Link target='blank' href='https://community.in.here.com/?l=38.234840,-85.756722,19,satellite'>
                   <Image src="/assets/mapcreator-map.png" alt='google map image' width={1000} height={1000} className='h-full w-full rounded-md object-cover' />
@@ -189,11 +189,11 @@ export default function Component() {
                 initial={{ opacity: 0, x: -20 }}
                 animate={{ opacity: 1, x: 0 }}
                 transition={{ delay: index * 0.1 + 0.5 }}
-                className="bg-gradient-to-r from-green-100 to-blue-400 rounded-lg p-4 shadow-lg backdrop-blur-sm border border-[#97c3c0]/20"
+                className="bg-gradient-to-r from-[#006d5b] to-[#20b2aa] rounded-lg p-4 shadow-lg backdrop-blur-sm border border-[#97c3c0]/20"
               >
                 <div className="flex items-center justify-between">
                   <div className="flex items-center space-x-2">
-                    <span className="text-zinc-900">{question}</span>
+                    <span className="text-white">{question}</span>
                   </div>
                   <div className="flex space-x-3">
                     <motion.button
@@ -207,7 +207,7 @@ export default function Component() {
                       }
                       className={`p-2 rounded-full transition-colors border ${selectedAnswers[index] === 'yes'
                         ? 'bg-green-200 text-green-600 border border-green-900'
-                        : 'bg-white text-zinc-900 hover:bg-blue-300 border border-blue-900'
+                        : 'bg-white text-black hover:bg-blue-300 border border-blue-900'
                         }`}
                     >
                       <Check className="h-5 w-5" />
@@ -223,7 +223,7 @@ export default function Component() {
                       }
                       className={`p-2 rounded-full transition-colors ${selectedAnswers[index] === 'no'
                         ? 'bg-red-200 text-red-600 border border-red-900'
-                        : 'bg-white text-zinc-900 hover:bg-blue-300 border border-blue-900'
+                        : 'bg-white text-black hover:bg-blue-300 border border-blue-900'
                         }`}
                     >
                       <X className="h-5 w-5" />
@@ -239,7 +239,7 @@ export default function Component() {
                       }
                       className={`p-2 rounded-full transition-colors ${selectedAnswers[index] === 'unsure'
                         ? 'bg-yellow-200 text-yellow-600 border border-blue-900'
-                        : 'bg-white text-zinc-900 hover:bg-blue-300 border border-blue-900'
+                        : 'bg-white text-black hover:bg-blue-300 border border-blue-900'
                         }`}
                     >
                       <HelpCircle className="h-5 w-5" />
@@ -257,15 +257,15 @@ export default function Component() {
             className="mt-6 space-y-4"
           >
             <div className="flex items-center space-x-2">
-              <div className="bg-gradient-to-r from-green-100 to-blue-400 p-2 rounded-full backdrop-blur-sm">
-                <LinkIcon className="h-6 w-6 text-zinc-900" />
+              <div className="bg-gradient-to-r from-[#006d5b] to-[#20b2aa] p-2 rounded-full backdrop-blur-sm">
+                <LinkIcon className="h-6 w-6 text-white" />
               </div>
               <Input
                 type="url"
                 placeholder="Enter URL for additional information"
                 value={url}
                 onChange={(e) => setUrl(e.target.value)}
-                className="flex-grow bg-gradient-to-r from-green-100 to-blue-400 border-[#97c3c0]/20 text-zinc-900 placeholder-[#97c3c0] backdrop-blur-sm"
+                className="flex-grow bg-gradient-to-r from-[#006d5b] to-[#20b2aa] border-[#97c3c0]/20 text-white placeholder-[#97c3c0] backdrop-blur-sm"
               />
             </div>
             <div className="flex justify-end">
