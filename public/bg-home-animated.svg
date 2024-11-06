@@ -1,0 +1,32 @@
+<svg width="1440" height="1024" viewBox="0 0 1440 1024" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <g opacity="0.3" filter="url(#filter0_f_1_2)">
+    <path d="M1104.64 -17.4331C1241.11 -98.9331 1402.93 -33.2664 1483.64 101.9C1564.35 237.067 1498.14 397.4 1361.67 478.9C1225.2 560.4 1063.37 494.733 982.666 359.567C901.959 224.4 968.166 64.0669 1104.64 -17.4331Z" fill="#4F46E5"/>
+  </g>
+  <g opacity="0.3" filter="url(#filter1_f_1_2)">
+    <path d="M-23.3333 1041.43C113.133 959.933 274.956 1025.6 355.667 1160.77C436.378 1295.93 370.171 1456.27 233.704 1537.77C97.2373 1619.27 -64.5851 1553.6 -145.296 1418.43C-226.007 1283.27 -159.8 1122.93 -23.3333 1041.43Z" fill="#4F46E5"/>
+  </g>
+  <g id="cross1" opacity="0.1">
+    <path d="M1339 6V86" stroke="#4F46E5" stroke-width="11" stroke-linecap="round"/>
+    <path d="M1299 46L1379 46" stroke="#4F46E5" stroke-width="11" stroke-linecap="round"/>
+  </g>
+  <g id="cross2" opacity="0.1">
+    <path d="M1032 86V166" stroke="#4F46E5" stroke-width="11" stroke-linecap="round"/>
+    <path d="M992 126L1072 126" stroke="#4F46E5" stroke-width="11" stroke-linecap="round"/>
+  </g>
+  <g id="cross3" opacity="0.1">
+    <path d="M90 898V978" stroke="#4F46E5" stroke-width="11" stroke-linecap="round"/>
+    <path d="M50 938L130 938" stroke="#4F46E5" stroke-width="11" stroke-linecap="round"/>
+  </g>
+  <defs>
+    <filter id="filter0_f_1_2" x="682.666" y="-317.433" width="1100.97" height="1096.33" filterUnits="userSpaceOnUse" color-interpolation-filters="sRGB">
+      <feFlood flood-opacity="0" result="BackgroundImageFix"/>
+      <feBlend mode="normal" in="SourceGraphic" in2="BackgroundImageFix" result="shape"/>
+      <feGaussianBlur stdDeviation="150" result="effect1_foregroundBlur_1_2"/>
+    </filter>
+    <filter id="filter1_f_1_2" x="-445.296" y="741.567" width="1100.96" height="1096.2" filterUnits="userSpaceOnUse" color-interpolation-filters="sRGB">
+      <feFlood flood-opacity="0" result="BackgroundImageFix"/>
+      <feBlend mode="normal" in="SourceGraphic" in2="BackgroundImageFix" result="shape"/>
+      <feGaussianBlur stdDeviation="150" result="effect1_foregroundBlur_1_2"/>
+    </filter>
+  </defs>
+</svg>
