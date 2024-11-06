@@ -1,6 +1,6 @@
 'use client';
 
-import { useState, useEffect } from 'react';
+import { useState, useEffect, Suspense } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
 import { ChevronRight, Sparkle } from 'lucide-react';
 import { useRouter, useSearchParams } from 'next/navigation';
@@ -35,7 +35,7 @@ const questions = [
     },
 ];
 
-export default function QuizPage() {
+const QuizPage = () => {
     const [currentQuestion, setCurrentQuestion] = useState(0);
     const [score, setScore] = useState(0);
     const [showScore, setShowScore] = useState(false);
@@ -233,3 +233,9 @@ export default function QuizPage() {
         </div>
     );
 }
+const EditPrompt = () => {
+    return <Suspense>
+        <QuizPage />
+    </Suspense>
+}
+export default EditPrompt
