@@ -8,7 +8,7 @@
     "lint": "next lint",
     "postinstall": "prisma generate",
     "build": "prisma generate && next build",
-    "build-1":"next build"
+    "build-1": "next build"
   },
   "dependencies": {
     "@prisma/client": "^5.22.0",
@@ -28,7 +28,8 @@
     "react-dom": "19.0.0-rc-02c0e824-20241028",
     "tailwind-merge": "^2.5.4",
     "tailwindcss": "^3.4.14",
-    "tailwindcss-animate": "^1.0.7"
+    "tailwindcss-animate": "^1.0.7",
+    "zod": "^3.23.8"
   },
   "devDependencies": {
     "@types/node": "^20",

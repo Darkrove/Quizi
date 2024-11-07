@@ -1,5 +1,7 @@
 import { NextResponse, NextRequest } from 'next/server';
 import { prisma } from '@/lib/prisma';
+import messages from '@/constants/messages';
+import { z } from "zod"
 
 export async function POST(request: NextRequest) {
   try {
@@ -21,8 +23,14 @@ export async function POST(request: NextRequest) {
     });
 
     return NextResponse.json({ success: true, insertedId: result.id });
-  } catch (error) {
-    console.error("Error saving quiz result:", error);
-    return NextResponse.json({ success: false, error: "Failed to save quiz result" }, { status: 500 });
+  }  catch (error) {
+    if (error instanceof z.ZodError) {
+      console.log(error)
+      return NextResponse.json({ error: error.issues }, { status: 400 })
+    }
+    return NextResponse.json(
+      { error, message: messages.request.failed },
+      { status: 500 }
+    )
   }
 }
