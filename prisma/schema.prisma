@@ -14,17 +14,11 @@ datasource db {
 }
 
 model QuizResult {
-  id             String            @id @default(auto()) @map("_id") @db.ObjectId
+  id             String   @id @default(auto()) @map("_id") @db.ObjectId
   name           String
   employeeId     String
   score          Int
   totalQuestions Int
-  timestamp      DateTime          @default(now())
-  answers        QuestionAnswer[]
-}
-
-type QuestionAnswer {
-  questionId     String
-  questionText   String
-  selectedAnswer String
+  timestamp      DateTime   @default(now())
+  answers        Json?
 }
