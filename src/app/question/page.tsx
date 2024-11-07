@@ -30,18 +30,18 @@ import { Input } from '@/components/ui/input';
 import Link from 'next/link';
 import { cn } from '@/lib/utils';
 export default function Component() {
-  const [progress, setProgress] = useState(40);
+  const [progress, setProgress] = useState(33);
   const [selectedAnswers, setSelectedAnswers] = useState<
     Record<number, string>
   >({});
   const [url, setUrl] = useState('');
 
   const questions = [
-    "Can you find the location of place?",
-    "Is this place currently open or closed?",
-    'Can you find any recent reviews (last 6 months)?',
-    'Does this place have vehicle parking?',
-    "Do they accept cash and card payments?",
+    "Can you find the location of place ?",
+    "Is this place currently open ?",
+    'Can you find any recent reviews (last 6 months) ?',
+    'Does this place have vehicle parking ?',
+    "Do they accept cash and card payments ?",
   ];
 
   return (
@@ -118,7 +118,7 @@ export default function Component() {
                   <div className="flex items-center space-x-3 text-sm text-white">
                 <span>Progress</span>
                 <Progress value={progress} className="w-24 bg-[#97c3c0]/20 border border-zinc-800" />
-                <span>4/10</span>
+                <span>1/3</span>
               </div>
                 </div>
               </div>
@@ -185,7 +185,10 @@ export default function Component() {
                     <span className="text-white">{question}</span>
                   </div>
                   <div className="flex space-x-3">
-                    <motion.button
+                  <TooltipProvider>
+                      <Tooltip>
+                        <TooltipTrigger>
+                        <motion.button
                       whileHover={{ scale: 1.05 }}
                       whileTap={{ scale: 0.95 }}
                       onClick={() =>
@@ -201,7 +204,17 @@ export default function Component() {
                     >
                       <Check className="h-5 w-5" />
                     </motion.button>
-                    <motion.button
+                        </TooltipTrigger>
+                        <TooltipContent>
+                          <p>Yes</p>
+                        </TooltipContent>
+                      </Tooltip>
+                    </TooltipProvider>
+
+                    <TooltipProvider>
+                      <Tooltip>
+                        <TooltipTrigger>
+                        <motion.button
                       whileHover={{ scale: 1.05 }}
                       whileTap={{ scale: 0.95 }}
                       onClick={() =>
@@ -217,7 +230,17 @@ export default function Component() {
                     >
                       <X className="h-5 w-5" />
                     </motion.button>
-                    <motion.button
+                        </TooltipTrigger>
+                        <TooltipContent>
+                          <p>No</p>
+                        </TooltipContent>
+                      </Tooltip>
+                    </TooltipProvider>
+                    
+                    <TooltipProvider>
+                      <Tooltip>
+                        <TooltipTrigger>
+                        <motion.button
                       whileHover={{ scale: 1.05 }}
                       whileTap={{ scale: 0.95 }}
                       onClick={() =>
@@ -233,6 +256,13 @@ export default function Component() {
                     >
                       <HelpCircle className="h-5 w-5" />
                     </motion.button>
+                        </TooltipTrigger>
+                        <TooltipContent>
+                          <p>Not Sure</p>
+                        </TooltipContent>
+                      </Tooltip>
+                    </TooltipProvider>
+                    
                   </div>
                 </div>
               </motion.div>
