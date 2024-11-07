@@ -186,6 +186,40 @@ const router = useRouter()
                 </motion.div>
               </CardContent>
             </Card>
+
+            <Card className="bg-gradient-to-r from-[#006d5b] to-[#20b2aa] shadow-lg backdrop-blur-sm">
+              <CardHeader className="p-4">
+                <CardTitle className="text-sm font-medium flex items-center text-white">
+                  <Search className="h-4 w-4 mr-2" />
+                  Google Drive
+                </CardTitle>
+              </CardHeader>
+              <CardContent className="p-4 pt-0">
+                <motion.div
+                  whileHover={{ scale: 1.02 }}
+                  className="bg-blue-100 rounded-lg p-8 text-center text-[#2d5e5e]"
+                >
+                  Google Drive View
+                </motion.div>
+              </CardContent>
+            </Card>
+
+            <Card className="bg-gradient-to-r from-[#006d5b] to-[#20b2aa] shadow-lg backdrop-blur-sm">
+              <CardHeader className="p-4">
+                <CardTitle className="text-sm font-medium flex items-center text-white">
+                  <Search className="h-4 w-4 mr-2" />
+                  Map Creator Drive
+                </CardTitle>
+              </CardHeader>
+              <CardContent className="p-4 pt-0">
+                <motion.div
+                  whileHover={{ scale: 1.02 }}
+                  className="bg-blue-100 rounded-lg p-8 text-center text-[#2d5e5e]"
+                >
+                  Map Creator Drive View
+                </motion.div>
+              </CardContent>
+            </Card>
           </div>
 
           <motion.div
