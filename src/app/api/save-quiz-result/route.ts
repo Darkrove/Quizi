@@ -21,14 +21,16 @@ const quizSchema = z.object({
 export async function POST(request: NextRequest) {
   try {
     const data = quizSchema.parse(await request.json());
-
+    console.time("DatabaseOperation");
     const result = await prisma.quizResult.create({
       data: {
         ...data
       },
     });
-
+    console.timeEnd("DatabaseOperation");
+    console.time("Response");
     return NextResponse.json({ success: true, insertedId: result.id });
+    console.timeEnd("Response");
   } catch (error) {
     if (error instanceof z.ZodError) {
       return NextResponse.json({ error: error.issues }, { status: 400 });
