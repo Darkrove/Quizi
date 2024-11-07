@@ -1,6 +1,6 @@
 'use client';
 
-import { useState } from 'react';
+import { useEffect, useState } from 'react';
 import { motion } from 'framer-motion';
 import Image from 'next/image';
 import { buttonVariants } from "@/components/ui/button"
@@ -35,6 +35,7 @@ export default function Component() {
     Record<number, string>
   >({});
   const [url, setUrl] = useState('');
+  const [isFormValid, setIsFormValid] = useState(false)
 
   const questions = [
     "Can you find the location of place ?",
@@ -43,6 +44,11 @@ export default function Component() {
     'Does this place have vehicle parking ?',
     "Do they accept cash and card payments ?",
   ];
+
+  useEffect(() => {
+    const allQuestionsAnswered = questions.every((_, index) => selectedAnswers[index] !== undefined)
+    setIsFormValid(allQuestionsAnswered)
+  }, [selectedAnswers])
 
   return (
     <div
@@ -92,9 +98,7 @@ export default function Component() {
                       </Tooltip>
                     </TooltipProvider>
                   </div>
-
                 </div>
-
 
                 <span className="text-sm text-yellow-500 font-medium">
                   +10 Coins
@@ -288,7 +292,10 @@ export default function Component() {
               />
             </div>
             <div className="flex justify-end">
-            <button className="flex items-center px-6 py-3 bg-green-500 text-sm font-medium text-white rounded-lg  hover:bg-green-700 transition duration-200">
+            <button            className={`flex items-center px-6 py-3 bg-green-500 text-sm font-medium text-white rounded-lg  hover:bg-green-700 transition duration-200 ${
+              isFormValid ? 'hover:bg-[#4a9d94]' : 'opacity-50 cursor-not-allowed'
+            }`}
+            disabled={!isFormValid}>
           <Link href='/result' className="flex justify-center items-center"> 
 
           Submit
