@@ -15,7 +15,7 @@ const page = () => {
             backgroundImage:
                 'url("/assets/205b79ac4dc42a146713813581ab3f86.gif")',
         }}>
-            <div className="min-h-screen w-full backdrop-blur-sm bg-slate-900/60 flex flex-col justify-center items-center">
+            <div className="min-h-screen w-full bg-slate-900/60 flex flex-col justify-center items-center">
                 <div className="max-w-4xl mx-auto p-8 bg-[#383c45] flex flex-col justify-center items-center gap-6 rounded-xl shadow-2xl">
                     <Image src='/assets/here-logo.png' alt='logo' height={1000} width={1000} className='h-32 w-32 object-contain' />
                     <div className="text-center mb-8">

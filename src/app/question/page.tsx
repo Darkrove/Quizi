@@ -17,6 +17,7 @@ import {
   AlertCircle,
   Link as LinkIcon,
   Car,
+  CircleCheckBig,
 } from 'lucide-react';
 import { Button } from '@/components/ui/button';
 import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card';
@@ -47,7 +48,7 @@ export default function Component() {
   const [url, setUrl] = useState('');
   const [isFormValid, setIsFormValid] = useState(false)
   const [showCompletionModal, setShowCompletionModal] = useState(false)
-const router = useRouter()
+  const router = useRouter()
   const questions = [
     "Can you find the location of place ?",
     "Is this place currently open ?",
@@ -75,12 +76,12 @@ const router = useRouter()
           'url("/assets/205b79ac4dc42a146713813581ab3f86.gif")',
       }}
     >
-      <div className="min-h-screen w-full backdrop-blur-sm bg-slate-900/70">
+      <div className="min-h-screen w-full bg-slate-900/70">
         <div className="w-full max-w-5xl mx-auto p-6">
           <motion.div
             initial={{ opacity: 0, y: -20 }}
             animate={{ opacity: 1, y: 0 }}
-            className="bg-gradient-to-r from-[#006d5b] to-[#20b2aa] rounded-lg p-4 mb-6 shadow-lg backdrop-blur-sm border sm:p-6"
+            className="bg-gradient-to-r from-[#006d5b] to-[#20b2aa] rounded-lg px-4 py-2 mb-6 shadow-lg backdrop-blur-sm border sm:px-6"
           >
             <div className="flex flex-col sm:flex-row items-start justify-between">
               <div className="w-full">
@@ -158,7 +159,9 @@ const router = useRouter()
               </CardHeader>
               <CardContent className="p-4 pt-0">
                 <motion.div
-                  whileHover={{ scale: 1.02 }}
+                  initial={{ opacity: 0, x: -20 }}
+                  animate={{ opacity: 1, x: 0 }}
+                  transition={{ delay: 0.1 + 0.5 }}
                   className="bg-blue-100 rounded-lg text-center text-white"
                 >
                   <Link target='blank' href='https://maps.app.goo.gl/xTxBpNqvqP33WTYW8'>
@@ -178,7 +181,9 @@ const router = useRouter()
               </CardHeader>
               <CardContent className="p-4 pt-0">
                 <motion.div
-                  whileHover={{ scale: 1.02 }}
+                  initial={{ opacity: 0, x: -20 }}
+                  animate={{ opacity: 1, x: 0 }}
+                  transition={{ delay: 0.1 + 0.5 }}
                   className="bg-blue-100 rounded-lg text-center text-white"
                 >
                   <Link target='blank' href='https://community.in.here.com/?l=38.234840,-85.756722,19,satellite'>
@@ -196,11 +201,16 @@ const router = useRouter()
                 </CardTitle>
               </CardHeader>
               <CardContent className="p-4 pt-0">
+                
                 <motion.div
-                  whileHover={{ scale: 1.02 }}
-                  className="bg-blue-100 rounded-lg p-8 text-center text-[#2d5e5e]"
+                  initial={{ opacity: 0, x: -20 }}
+                  animate={{ opacity: 1, x: 0 }}
+                  transition={{ delay: 0.1 + 0.5 }}
+                  className="bg-blue-100 rounded-lg text-center text-[#2d5e5e]"
                 >
-                  Google Drive View
+                 <Link target='blank' href="https://www.google.com/maps/place/Papa+B's+Chicken+%26+Fish/@38.2346907,-85.7569114,3a,75y,46.77h,84.02t/data=!3m7!1e1!3m5!1sdaWq59YXzxdJotPA4fcCYA!2e0!6shttps:%2F%2Fstreetviewpixels-pa.googleapis.com%2Fv1%2Fthumbnail%3Fcb_client%3Dmaps_sv.tactile%26w%3D900%26h%3D600%26pitch%3D5.975811649035819%26panoid%3DdaWq59YXzxdJotPA4fcCYA%26yaw%3D46.76867782266157!7i16384!8i8192!4m6!3m5!1s0x88690d51f8861e5b:0xd3d19675115c1f53!8m2!3d38.23479!4d-85.7568755!16s%2Fg%2F11qg2yndwg?coh=205410&entry=ttu&g_ep=EgoyMDI0MTEwNS4wIKXMDSoASAFQAw%3D%3D">
+                    <Image src="/assets/driveg.png" alt='google map image' width={1000} height={1000} className='h-full w-full rounded-md object-cover' />
+                  </Link>
                 </motion.div>
               </CardContent>
             </Card>
@@ -214,10 +224,13 @@ const router = useRouter()
               </CardHeader>
               <CardContent className="p-4 pt-0">
                 <motion.div
-                  whileHover={{ scale: 1.02 }}
-                  className="bg-blue-100 rounded-lg p-8 text-center text-[#2d5e5e]"
-                >
-                  Map Creator Drive View
+                  initial={{ opacity: 0, x: -20 }}
+                  animate={{ opacity: 1, x: 0 }}
+                  transition={{ delay: 0.1 + 0.5 }}
+                  className="bg-blue-100 rounded-lg text-center text-[#2d5e5e]"
+                ><Link target='blank' href='https://community.in.here.com/?l=38.234840,-85.756722,19,satellite'>
+                  <Image src="/assets/drivemc.png" alt='google map image' width={1000} height={1000} className='h-full w-full rounded-md object-cover' />
+                  </Link>
                 </motion.div>
               </CardContent>
             </Card>
@@ -235,7 +248,7 @@ const router = useRouter()
                 initial={{ opacity: 0, x: -20 }}
                 animate={{ opacity: 1, x: 0 }}
                 transition={{ delay: index * 0.1 + 0.5 }}
-                className="bg-gradient-to-r from-[#006d5b] to-[#20b2aa] rounded-lg p-4 shadow-lg backdrop-blur-sm border"
+                className="bg-gradient-to-r from-[#006d5b] to-[#20b2aa] rounded-lg px-4 py-2 shadow-lg backdrop-blur-sm border"
               >
                 <div className="flex items-center justify-between">
                   <div className="flex items-center space-x-2">
@@ -332,8 +345,8 @@ const router = useRouter()
             transition={{ delay: 0.8 }}
             className="mt-6 space-y-4"
           >
-            <div className="flex items-center space-x-2">
-              <div className="bg-gradient-to-r from-[#006d5b] to-[#20b2aa] p-2 rounded-full backdrop-blur-sm">
+            <div className="flex items-center space-x-4">
+              <div className="bg-blue-700 p-2 rounded-full backdrop-blur-sm">
                 <LinkIcon className="h-6 w-6 text-white" />
               </div>
               <Input
@@ -343,19 +356,16 @@ const router = useRouter()
                 onChange={(e) => setUrl(e.target.value)}
                 className="flex-grow text-green-900 placeholder-green-900 backdrop-blur-sm"
               />
-            </div>
-            <div className="flex justify-end">
+              <div className="flex justify-end">
               <Button className={`flex items-center px-6 py-3 bg-green-500 text-sm font-medium text-white rounded-lg  hover:bg-green-700 transition duration-200 ${isFormValid ? 'hover:bg-[#4a9d94]' : 'opacity-50 cursor-not-allowed'
                 }`}
                 disabled={!isFormValid}
                 onClick={handleSubmit}>
-
+                  <CircleCheckBig className='w-4 h-4'/>
                 Submit
-
-
               </Button>
-
             </div>
+            </div>   
           </motion.div>
         </div>
       </div>
@@ -390,7 +400,7 @@ const router = useRouter()
                     // Add logic here to start a new quiz
                   }}
                 >
-                 Leaderboard
+                  Leaderboard
                 </Button>
               </div>
             </motion.div>

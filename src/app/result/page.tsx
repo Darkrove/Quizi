@@ -66,7 +66,7 @@ const LeaderboardPage = () => {
       backgroundImage:
         'url("/assets/205b79ac4dc42a146713813581ab3f86.gif")',
     }}>
-      <div className="min-h-screen w-full backdrop-blur-sm bg-slate-900/70">
+      <div className="min-h-screen w-full bg-slate-900/70">
         <div className="max-w-7xl mx-auto p-6">
           <motion.div 
             initial={{ opacity: 0, y: -20 }}
