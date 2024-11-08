@@ -16,6 +16,7 @@ import {
   X,
   AlertCircle,
   Link as LinkIcon,
+  Car,
 } from 'lucide-react';
 import { Button } from '@/components/ui/button';
 import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card';
@@ -190,7 +191,7 @@ const router = useRouter()
             <Card className="bg-gradient-to-r from-[#006d5b] to-[#20b2aa] shadow-lg backdrop-blur-sm">
               <CardHeader className="p-4">
                 <CardTitle className="text-sm font-medium flex items-center text-white">
-                  <Search className="h-4 w-4 mr-2" />
+                  <Car className="h-4 w-4 mr-2" />
                   Google Drive
                 </CardTitle>
               </CardHeader>
@@ -207,7 +208,7 @@ const router = useRouter()
             <Card className="bg-gradient-to-r from-[#006d5b] to-[#20b2aa] shadow-lg backdrop-blur-sm">
               <CardHeader className="p-4">
                 <CardTitle className="text-sm font-medium flex items-center text-white">
-                  <Search className="h-4 w-4 mr-2" />
+                  <Car className="h-4 w-4 mr-2" />
                   Map Creator Drive
                 </CardTitle>
               </CardHeader>
