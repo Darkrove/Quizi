@@ -228,7 +228,7 @@ export default function Component() {
                   animate={{ opacity: 1, x: 0 }}
                   transition={{ delay: 0.1 + 0.5 }}
                   className="bg-blue-100 rounded-lg text-center text-[#2d5e5e]"
-                ><Link target='blank' href='https://community.in.here.com/?l=38.234840,-85.756722,19,satellite'>
+                ><Link target='blank' href='https://www.mapillary.com/app/?pKey=998108548423307&focus=photo&lat=38.234695682046&lng=-85.75693875125&z=17'>
                   <Image src="/assets/drivemc.png" alt='google map image' width={1000} height={1000} className='h-full w-full rounded-md object-cover' />
                   </Link>
                 </motion.div>
